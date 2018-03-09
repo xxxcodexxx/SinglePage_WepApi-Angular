@@ -1,0 +1,23 @@
+﻿<div ng-controller="CategoryListController">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Supplier</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="category in categories">
+                <td>{{category.Title}}</td>
+                <td>{{category.Supplier}}</td>
+                <td>
+                    <a href="#!/detail/{{category.Id}}" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-list-alt"></i></a>
+                    <a ng-click="delete(category)" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<a class="btn btn-success btn-sm" ng-click="create()">Add New Category</a>
+<div ng-include="'Edit.html'"></div>  

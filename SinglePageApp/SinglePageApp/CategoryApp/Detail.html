@@ -1,0 +1,8 @@
+﻿<div ng-controller="DetailController">
+    <h3>Title: {{category.Title}}</h3>
+    <div>Supplier: {{category.Supplier}}</div>
+    <br /><br />
+    <a href="#/list/" class="btn btn-info btn-default">Back to List</a>
+</div>  
+<a class="btn btn-success btn-default" ng-click="edit()">Edit Category Details</a>
+<div ng-include="'Edit.html'"></div>
